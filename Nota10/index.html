@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nota10</title>
-    <link rel="stylesheet" href="recursos/css/style.css">
-</head>
-<body onload="registerLogin()">
-    <header>
-        <nav>
-            <img src="recursos/img/site/logonota10.jpg" alt="logo nota 10">
-        </nav>
-    </header>
-    <section >
-        <div id="access">
-            <img src="" alt="login do usuário">
-            <label for="login">Login:</label>
-            <input type="text" name="login" id="login" placeholder="Digite seu login">
-            <label for="password">Senha:</label>
-            <input type="text" name="password" id="password" placeholder="Digite sua senha">
-            <input type="submit" value="Entrar" onclick="userValidation()">
-            <a href="#">Esqueceu sua senha ?</a>
-        </div>
-    </section>
-    <div id="wrongPassword">
-        
-    </div>
-    <div id="modal">
-        <div>
-            <h2>Esquece a senha ?</h2>
-            <label for="new_password">Altere sua senha</label>
-            <input type="text" name="new_password" id="new_password" placeholder="Digite sua senha">
-            <input type="submit" value="Entrar" onclick="newPassword()">
-        </div>
-       
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nota10</title>
+     <link rel="stylesheet" href="recursos/css/style.css">
+    </head>
+    <body onload="registerLogin()">
+        <header>
+            <nav>
+                <img src="recursos/img/site/logonota10.jpg" alt="logo nota 10">
+            </nav>
+        </header>
+        <section>
+            <div id="access">
+                <img src="" alt="login do usuário">
+                <label for="login">Login:</label>
+                <input type="text" name="login" id="login"  placeholder="Digite seu login">
+                <label for="password">Senha:</label>
+                <input type="text" name="password" id="password" placeholder="Digite sua senha">
+                <input type="submit" value="Entrar" onclick="userValidation()">
 
-    <script src="recursos/js/app.js"></script>
-</body>
+                <a href="#" onclick="forgotPasswordModal()">Esqueceu sua senha ?</a>
+                <div id="wrongPassword">  
+                </div>
+            </div>
+        </section>
+
+        <div id="fade" class="hide">
+            <div id="modal_card" class="hide">
+                <a href="#" onclick="forgotPasswordModal()">sair</a>
+                <h2>Esquece a senha ?</h2>
+                <label for="new_password">Altere sua senha</label>
+                <input type="text" name="new_password" id="new_password" placeholder="Digite sua senha">
+                <input type="submit" value="Entrar" onclick="newPassword()">   
+            </div>
+        </div>
+
+        <script src="recursos/js/app.js"></script>
+    </body>
 </html>

@@ -4,13 +4,13 @@
 }
 
 #wrongPassword{
-    margin: 20px;
+    margin: 10px 5px;
 }
 
 #wrongPassword span{
-    border: 1px solid black;
-    padding: 10px;
-    color : #741212
+    padding: 5px;
+    color : #741212;
+    align-items:center ;
 }
 
 header nav{
@@ -57,10 +57,44 @@ section {
     padding: 20px;
 } */
 
+#fade{
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.4) ;
+  z-index: 5;  
+}
+#modal_card{
+    position: relative;
+    top:30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border:1px solid #4fa81b;
+    border-radius: 20px;
+    width: 330px;
+    height: 150px;
+    z-index: 7;
+    background-color: #fff;
+    box-shadow: 3px 3px black;
+    padding: 10px;
+    
+}
 
-#modal{
-    position: absolute;
-    border: ;
+#fade,modal{
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s;
+}
+
+#fade.hide, 
+#modal_card.hide{
+    opacity: 0;
+    pointer-events: none;
+    z-index: -5;
+
 }
 
 

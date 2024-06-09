@@ -6,7 +6,7 @@ function registerLogin(){
     if(login === null){
         localStorage.setItem("login","icet2024")
         localStorage.setItem("password","icet2024")        
-    } 
+    }  
 } 
 
 function userValidation(){
@@ -23,29 +23,45 @@ function userValidation(){
 
   const passwordInput = document.getElementById('password').value
 
-  if((loginStorage == loginInput  && passwordStoragetorage == passwordInput) &&
-    (loginStorage != ''  && passwordStoragetorage != '' )){
+  if((loginStorage == loginInput  && passwordStorage == passwordInput) &&
+    (loginStorage != ''  && passwordStorage != '' )){
         window.location.href="home.html"
   }else{
     if(cont == 0){
-        createElementSpanLogin()
+      createElementsinId('span','wrongPassword','Login ou Senha errado!')
      cont = 1
     }
   }
 }
 
-function createElementSpanLogin(){
-    let  spanWrongPassword = document.createElement('span')
+function newPassword(){
+  let password = document.getElementById('new_password').value
+  if(password != ''){
+    localStorage.setItem('password',password)
+    createElementsinId('span','modal_card','Nova senha Gravada')
+  }
+ 
+}
 
-     spanWrongPassword = document.createElement('span')
+function forgotPasswordModal(){
+  let fade = document.querySelector('#fade')
+  let modal_card = document.querySelector('#modal_card')
+  
+  fade.classList.toggle('hide')
+  modal_card.classList.toggle('hide')
+}
 
-     spanWrongPassword.innerHTML = 'Login ou Senha errados'
+function createElementsinId(elementHTML,elementId,message){
+    let  spanWrongPassword = document.createElement(elementHTML)
+
+     spanWrongPassword.innerHTML = message
 
      //spanWrongPassword.style = 'color:red;padding:10px; border:1px solid black;'
-     const wrongPasswordId = document.getElementById('wrongPassword')
+     const wrongPasswordId = document.getElementById(elementId)
 
      //wrongPasswordId.style = 'margin : 20px'
      wrongPasswordId.append(spanWrongPassword)
 
      console.log(spanWrongPassword)
 }
+
