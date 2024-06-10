@@ -97,6 +97,37 @@ section {
 
 }
 
+/*-----------side menu  cadastrar pessoas-----------*/
+
+#header_home{
+    background-color: rgb(99, 178, 209);
+    border-bottom:2px solid  rgb(56, 141, 167);
+}
+
+#side_menu{
+    border-right:2px solid  rgb(56, 141, 167);
+    background-color: rgb(99, 178, 209);
+    width: 20%;
+    height: 560px;
+}
+
+#side_menu ul{
+    background-color: rgb(99, 178, 209);
+  width: 100%;
+}
+
+#side_menu ul li{
+    border-bottom: 2px solid white;
+    width: 100%;
+    padding: 5px;
+}
+
+#side_menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
 
 
 
